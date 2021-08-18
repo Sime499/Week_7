@@ -1,0 +1,37 @@
+<html>
+    <head>
+        
+
+    </head>
+
+    <body>
+        <h1>Add Movie</h1>
+
+        <form method = "POST" action = "/movies/add-movie">
+            <input type = "text" placeholder = "Enter trip title" name = "movieTitle" />
+            <input type = "text" placeholder = "Enter description  " name = "movieDescription" />
+            <input type = "text" placeholder = "Enter genre" name = "movieGenre" />
+            <input type = "text" placeholder = "Enter posterURL" name = "moviePosterURL" />
+
+
+            <button>Add</button>
+        </form>
+
+        <ul>
+        {{#allmovies}} 
+        
+        <li>
+            {{title}} - <img src="{{posterURL}}"> -{{description}}-{{genre}}
+            <input type="hidden" id="deleteId" name="movieID" value="movieID">
+
+        </li>
+
+        {{/allmovies}} 
+        </ul>
+
+
+
+        
+    </body>
+
+</html>
